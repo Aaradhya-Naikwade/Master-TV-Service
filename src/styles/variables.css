@@ -1,0 +1,18 @@
+:root {
+  /* Colors */
+  --nav-bg: #f7f7f7;
+  --text-dark: #222;
+  --text-medium: #555;
+  --dropdown-bg: #ffffff;
+  --overlay-bg: rgba(0, 0, 0, 0.45);
+
+  /* Brand Colors */
+  --primary: #409fff;
+
+  /* Layout */
+  --container-padding: 20px;
+  --nav-height: 70px;
+
+  /* Animation */
+  --transition: 0.25s ease;
+}

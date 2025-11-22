@@ -1,0 +1,250 @@
+@import "./variables.css";
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  background: var(--nav-bg);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+}
+
+.logo .tv-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* DESKTOP NAV */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.desktop-nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+/* ACTIVE LINK */
+.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+
+/* DESKTOP DROPDOWN */
+.services-wrapper {
+  position: relative;
+}
+
+.services-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: var(--dropdown-bg);
+  width: 160px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+  transform: scale(0.95);
+  opacity: 0;
+  animation: dropdownShow 0.22s forwards ease-out;
+}
+
+@keyframes dropdownShow {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.dropdown a {
+  padding: 10px 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background: #f2f2f2;
+}
+
+/* HAMBURGER */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  display: none;
+  color: var(--text-dark);
+}
+
+/* MOBILE SIDEBAR */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80%;
+  max-width: 300px;
+
+  background: var(--nav-bg);
+  box-shadow: -3px 0 15px rgba(0,0,0,0.15);
+
+  z-index: 100;
+  padding: 20px;
+  
+  transform: translateX(100%);
+  animation: slideIn 0.3s forwards ease-out;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--text-dark);
+}
+
+/* MOBILE LINKS */
+.mobile-links {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mobile-links a {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* MOBILE SERVICES */
+.mobile-services-btn {
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mobile-services-dropdown {
+  margin-left: 14px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: slideDown 0.25s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+.services-btn.rotate svg,
+.mobile-services-btn.rotate svg {
+  transform: rotate(180deg);
+  transition: 0.25s;
+}
+
+.services-btn svg,
+.mobile-services-btn svg {
+  transition: 0.25s;
+}
+
+
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 90;
+}
+
+
+/* Sticky Navbar Animation */
+.navbar {
+  transition: 0.3s ease-in-out;
+}
+
+.sticky-nav {
+  background: #ffffff;
+  height: 60px; /* slight shrink */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-bottom: none;
+  transform: translateY(0);
+}
+
+/* Logo size also smoothly shrinks */
+.sticky-nav .logo {
+  font-size: 1.15rem;
+}
+
+.sticky-nav .tv-icon {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,139 @@
+@import "./variables.css";
+
+/* HERO MAIN */
+.hero {
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* your image */
+    background-image: url("../images/demo.jpg");
+
+    display: flex;
+    align-items: center;
+}
+
+/* CONTENT BOX */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* SMALL HEADING */
+.hero-small {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+    animation-delay: 0.1s;
+}
+
+/* BIG TITLE */
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-dark);
+
+    animation: fadeUp 0.7s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+}
+
+/* HIGHLIGHTED TEXT */
+.hero-instant {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+
+    animation: fadeUp 0.7s ease forwards;
+    opacity: 0;
+    animation-delay: 0.35s;
+}
+
+/* BUTTON */
+.hero-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 26px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    width: fit-content;
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.45s;
+
+    transition: 0.25s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------------------------------- */
+/* RESPONSIVE FIXES */
+/* ---------------------------------------- */
+
+/* TABLET AND BELOW */
+@media (max-width: 900px) {
+    .hero {
+        height: auto;              /* FIX: allow hero to expand */
+        padding-left: 30px;
+        padding-right: 20px;
+
+        padding-top: 120px;        /* space below navbar */
+        padding-bottom: 60px;
+
+        background-size: cover;
+        background-position: top center;
+        margin: 0;                 /* remove spacing issues */
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+}
+
+/* MOBILE SMALL */
+@media (max-width: 600px) {
+    .hero {
+        height: auto;              /* FIX */
+        padding-top: 140px;
+        padding-bottom: 70px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-small {
+        font-size: 1rem;
+    }
+
+    .hero-instant {
+        font-size: 1.1rem;
+    }
+}

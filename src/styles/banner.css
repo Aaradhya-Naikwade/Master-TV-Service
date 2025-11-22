@@ -1,0 +1,61 @@
+@import "./variables.css";
+
+/* MAIN BANNER */
+.banner {
+  width: 100%;
+  height: 70px;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  /* Fade & Slide Animation */
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+/* SCROLLING TRACK */
+.banner-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 15s linear infinite;
+}
+
+/* TEXT */
+.banner-track span {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  padding-right: 100%;
+}
+
+/* MARQUEE ANIMATION */
+@keyframes scrollLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* FADE SLIDE-UP (same as hero) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .banner {
+    height: 60px;
+  }
+
+  .banner-track span {
+    font-size: 1.15rem;
+  }
+}

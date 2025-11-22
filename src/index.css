@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* --- Root Theme Variables  --- */
+:root {
+  --primary: #09226f;
+  --secondary: #6fb517;
+  --bg: #fafafa;
+  --text: #020202;
+}
+
+/* left and right spacing */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+

@@ -1,0 +1,87 @@
+@import "./variables.css";
+
+.testimonials-section {
+  padding: 80px 0;
+  background: var(--bg);
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.7s ease;
+}
+
+.testimonials-section.animate-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Top headings */
+.testimonials-top {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.testimonials-main-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.testimonials-sub-heading {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-top: 6px;
+}
+
+/* Swiper container spacing */
+.testimonial-swiper {
+  padding-bottom: 45px;
+}
+
+/* Testimonial Card */
+.testimonial-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Image */
+.testimonial-img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Name */
+.testimonial-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Stars */
+.testimonial-stars {
+  font-size: 1.1rem;
+  color: #f7b500;
+  margin: 8px 0;
+}
+
+/* Text */
+.testimonial-text {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* PAGINATION DOTS */
+.swiper-pagination-bullet {
+  background: var(--primary);
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary);
+  opacity: 1;
+}
