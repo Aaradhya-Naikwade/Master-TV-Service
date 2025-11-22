@@ -27,7 +27,7 @@
 
 /* SMALL HEADING */
 .hero-small {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--text-dark);
     animation: fadeUp 0.6s ease forwards;
     opacity: 0;
@@ -36,7 +36,7 @@
 
 /* BIG TITLE */
 .hero-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);
@@ -48,7 +48,7 @@
 
 /* HIGHLIGHTED TEXT */
 .hero-instant {
-    font-size: 1.2rem;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--primary);
 

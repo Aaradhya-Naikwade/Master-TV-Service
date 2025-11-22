@@ -11,7 +11,7 @@ export default function Footer() {
           <h2 className="footer-title">Master TV Service</h2>
 
           <p className="footer-about">
-            We provide fast, professional and affordable TV repair services 
+            We provide fast, professional and affordable TV repair services
             including LED, LCD, Smart TV, OLED & QLED repairs across Gurugram.
           </p>
 
@@ -37,7 +37,7 @@ export default function Footer() {
 
           <div className="footer-item">
             <FaMapMarkerAlt className="footer-icon" />
-            <p>Sector 93, Gurugram, Haryana</p>
+            <p>Shop No. 123, IMT Rd, near Shri Shyam Garden, Hayatpur, Sector 93, Gurugram, Haryana 122505</p>
           </div>
         </div>
 
@@ -46,10 +46,11 @@ export default function Footer() {
           <iframe
             title="map"
             className="footer-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3103892627483!2d77.0413!3d28.585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18b408b687eb%3A0xfbfe352e!2sGurugram!5e0!3m2!1sen!2sin!4v1702748299123!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.684433555937!2d76.933956!3d28.4172288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d4648404095a617%3A0x4e51b58faa5036fe!2sMaster%20Tv%20Service!5e0!3m2!1sen!2sin!4v1702748299123!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"
           ></iframe>
+
         </div>
 
       </div>

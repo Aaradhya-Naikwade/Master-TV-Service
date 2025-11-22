@@ -37,18 +37,25 @@
   align-items: flex-start;   
 }
 
+/* FIXED FOOTER ITEM */
 .footer-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;     /* FIX: icon shrinks issue solved */
   gap: 10px;
   font-size: 1rem;
   color: #ddd;
 }
 
 .footer-icon {
-  width: 20px;
-  height: 20px;
+  font-size: 22px;            /* FIX: constant size */
+  min-width: 22px;            /* FIX: icon cannot shrink */
   color: var(--secondary);
+  margin-top: 2px;            /* better alignment with multiline text */
+}
+
+.footer-item p {
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* RIGHT - MAP */
@@ -86,7 +93,7 @@
   }
 
   .footer-center {
-    align-items: left;
+    align-items: flex-start; /* FIXED incorrect 'left' */
   }
 
   .footer-right {
