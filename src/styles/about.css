@@ -119,7 +119,7 @@
   .about-grid {
     grid-template-columns: 1fr;
     /* stack */
-    text-align: center;
+    text-align: left;
   }
 
   .about-right {
