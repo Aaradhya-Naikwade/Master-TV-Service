@@ -26,7 +26,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   /* ===============================
-     CLICK OUTSIDE TO CLOSE
+     CLICK OUTSIDE TO CLOSE 
   =============================== */
   useEffect(() => {
     function handleClickOutside(e) {
