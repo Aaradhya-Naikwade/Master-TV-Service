@@ -179,7 +179,7 @@ export default function Navbar() {
                   </NavLink>
 
                   <NavLink
-                    to="/service2/panel-bonding-acf-cof-tab"
+                    to="/panel-bonding-acf-cof-tab"
                     className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => setMobileMenuOpen(false)}
                   >

@@ -3,7 +3,6 @@ console.log("TEMPLATE_ID RAW:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
 console.log("PUBLIC_KEY RAW:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 console.log("ALL ENV KEYS:", Object.keys(import.meta.env));
 
-
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -12,15 +11,9 @@ export default function ContactForm({ subject = "", className = "" }) {
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState(null);
 
-    // Read env vars
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    // Debug (optional) — uncomment if needed
-    // console.log("SERVICE_ID:", SERVICE_ID);
-    // console.log("TEMPLATE_ID:", TEMPLATE_ID);
-    // console.log("PUBLIC_KEY:", PUBLIC_KEY);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -37,15 +30,14 @@ export default function ContactForm({ subject = "", className = "" }) {
         if (!form) return;
 
         const name = form["from_name"].value.trim();
-        const email = form["from_email"].value.trim();
         const phone = form["phone"].value.trim();
+        const address = form["address"].value.trim();
         const message = form["message"].value.trim();
-        const subj = form["subject"] ? form["subject"].value.trim() : subject || "Website Contact";
 
-        if (!name || !email || !message) {
+        if (!name || !message) {
             setStatus({
                 type: "error",
-                message: "Please fill all required fields.",
+                message: "Name and Message are required.",
             });
             return;
         }
@@ -55,10 +47,10 @@ export default function ContactForm({ subject = "", className = "" }) {
 
         const templateParams = {
             from_name: name,
-            from_email: email,
             phone: phone,
+            address: address,
             message: message,
-            subject: subj || subject || "Website Contact",
+            subject: subject || "Website Contact",
         };
 
         try {
@@ -86,6 +78,7 @@ export default function ContactForm({ subject = "", className = "" }) {
             className={`contact-form ${className}`}
             noValidate
         >
+            {/* NAME */}
             <input
                 name="from_name"
                 type="text"
@@ -94,6 +87,7 @@ export default function ContactForm({ subject = "", className = "" }) {
                 required
             />
 
+            {/* PHONE */}
             <input
                 name="phone"
                 type="tel"
@@ -101,22 +95,15 @@ export default function ContactForm({ subject = "", className = "" }) {
                 className="contact-input"
             />
 
+            {/* ADDRESS (NEW FIELD) */}
             <input
-                name="from_email"
-                type="email"
-                placeholder="Email Address"
-                className="contact-input"
-                required
-            />
-
-            <input
-                name="subject"
+                name="address"
                 type="text"
-                placeholder="Subject (optional)"
-                defaultValue={subject}
+                placeholder="Your Address"
                 className="contact-input"
             />
 
+            {/* MESSAGE */}
             <textarea
                 name="message"
                 placeholder="Your Message"
@@ -130,8 +117,9 @@ export default function ContactForm({ subject = "", className = "" }) {
 
             {status && (
                 <div
-                    className={`contact-status ${status.type === "error" ? "error" : "success"
-                        }`}
+                    className={`contact-status ${
+                        status.type === "error" ? "error" : "success"
+                    }`}
                 >
                     {status.message}
                 </div>
