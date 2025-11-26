@@ -46,11 +46,8 @@ export default function Navbar() {
      BODY SCROLL LOCK (MOBILE MENU)
   =============================== */
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    if (mobileMenuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
   }, [mobileMenuOpen]);
 
   /* ===============================
@@ -58,11 +55,7 @@ export default function Navbar() {
   =============================== */
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -90,6 +83,7 @@ export default function Navbar() {
             About Us
           </NavLink>
 
+          {/* SERVICES DROPDOWN */}
           <div className="services-wrapper" ref={dropdownRef}>
             <button
               className={`services-btn ${dropdownOpen ? "rotate" : ""}`}
@@ -101,16 +95,32 @@ export default function Navbar() {
             {dropdownOpen && (
               <div className="dropdown">
 
-                <NavLink to="/display-panel-repairing" className={({ isActive }) => (isActive ? "active" : "")}>
+                <NavLink
+                  to="/display-panel-repairing"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
                   Display Panel Repairing
                 </NavLink>
 
-                <NavLink to="/panel-bonding-acf-cof-tab" className={({ isActive }) => (isActive ? "active" : "")}>
+                <NavLink
+                  to="/panel-bonding-acf-cof-tab"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
                   Panel Bonding (ACF/COF/TAB)
                 </NavLink>
 
-                <NavLink to="/motherboard-repairs" className={({ isActive }) => (isActive ? "active" : "")}>
+                <NavLink
+                  to="/motherboard-repairs"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
                   Motherboard Repairs
+                </NavLink>
+
+                <NavLink
+                  to="/backlight-repair"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  LED / TV Backlight Repair
                 </NavLink>
 
               </div>
@@ -130,11 +140,11 @@ export default function Navbar() {
 
       </div>
 
-      {/* MOBILE BACKDROP (click outside closes menu) */}
+      {/* MOBILE BACKDROP */}
       {mobileMenuOpen && (
         <div className="mobile-menu-backdrop">
 
-          {/* MOBILE SIDEBAR MENU */}
+          {/* MOBILE SIDEBAR */}
           <div className="mobile-menu" ref={mobileMenuRef}>
 
             <button className="close-btn" onClick={() => setMobileMenuOpen(false)}>
@@ -192,6 +202,14 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Motherboard Repairs
+                  </NavLink>
+
+                  <NavLink
+                    to="/backlight-repair"
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    LED / TV Backlight Repair
                   </NavLink>
 
                 </div>

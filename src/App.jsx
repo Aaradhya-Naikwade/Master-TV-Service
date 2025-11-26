@@ -8,6 +8,7 @@ import About from "./pages/AboutUsPage";
 import Service1 from "./pages/Service1Page";
 import Service2 from "./pages/Service2Page";
 import Service3 from "./pages/Service3Page";
+import Service4 from "./pages/Service4Page";  
 import Contact from "./pages/ContactPage";
 
 import Footer from "./components/Footer";
@@ -35,6 +36,11 @@ function App() {
         <Route
           path="/motherboard-repairs"
           element={<Service3 />}
+        />
+
+        <Route
+          path="/backlight-repair"
+          element={<Service4 />}
         />
 
         <Route path="/contact" element={<Contact />} />
