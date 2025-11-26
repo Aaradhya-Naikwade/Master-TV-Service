@@ -35,7 +35,7 @@ export default function ContactPage() {
 
           <div className="contact-form-card section-animate-child delay-1">
 
-            <h2 className="contact-heading">Get In Touch</h2>
+            <h2 className="contact-heading" style={{ color: "black" }}>Get In Touch</h2>
             <p className="contact-subtext">
               Fill the form below and our technician will reach out shortly.
             </p>
