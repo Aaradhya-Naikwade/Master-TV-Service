@@ -99,7 +99,7 @@
 }
 
 .contact-submit:hover {
-  background: var(--secondary);
+  background: #1f4c79;
   transform: translateY(-3px);
 }
 
