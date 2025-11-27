@@ -105,12 +105,12 @@
         padding-left: 30px;
         padding-right: 20px;
 
-        padding-top: 120px;        /* space below navbar */
+        padding-top: 120px;       
         padding-bottom: 60px;
 
         background-size: cover;
         background-position: top center;
-        margin: 0;                 /* remove spacing issues */
+        margin: 0;                 
     }
 
     .hero-title {
@@ -121,7 +121,7 @@
 /* MOBILE SMALL */
 @media (max-width: 600px) {
     .hero {
-        height: auto;              /* FIX */
+        height: auto;            
         padding-top: 140px;
         padding-bottom: 70px;
     }

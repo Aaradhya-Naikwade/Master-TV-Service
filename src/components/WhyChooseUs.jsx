@@ -1,6 +1,9 @@
 import "../styles/why.css";
 import { useEffect, useRef } from "react";
 import Wcs1 from "../images/why-choose-us-1.png"
+import Wcs2 from "../images/why-choose-us-2.jpg"
+import Wcs3 from "../images/why-choose-us-3.jpg"
+
 
 export default function WhyChooseUs() {
   const sectionRef = useRef(null);
@@ -49,7 +52,7 @@ export default function WhyChooseUs() {
           {/* Column 2 */}
           <div className="why-box delay-2">
             <img 
-              src={Wcs1}
+              src={Wcs2}
               alt="Fast Doorstep Service"
               className="why-img"
             />
@@ -62,7 +65,7 @@ export default function WhyChooseUs() {
           {/* Column 3 */}
           <div className="why-box delay-3">
             <img 
-              src={Wcs1}
+              src={Wcs3}
               alt="Affordable Pricing"
               className="why-img"
             />
