@@ -1,5 +1,12 @@
 import "../styles/testimonials.css";
 import { useEffect, useRef } from "react";
+import Profile1 from "../images/Profile-1.jpg"
+import Profile2 from "../images/Profile-2.jpg"
+import Profile3 from "../images/Profile-3.jpg"
+import Profile4 from "../images/Profile-4.jpg"
+import Profile5 from "../images/Profile-5.jpg"
+
+
 
 // SWIPER IMPORTS
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +14,6 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import profileImg from "../images/profile.jpg"
 
 export default function TestimonialsSection() {
   const sectionRef = useRef(null);
@@ -30,32 +36,32 @@ export default function TestimonialsSection() {
 
   const feedback = [
     {
-      img: profileImg,
+      img: Profile1,
       name: "Rahul Sharma",
       rating: 5,
       text: "Their technician repaired my Smart TV within 30 minutes. Very professional and genuine pricing!"
     },
     {
-      img: profileImg,
+      img: Profile2,
       name: "Amit Verma",
       rating: 5,
       text: "Excellent service! My LED TV had no display, and they fixed it the same day using original parts."
     },
     {
-      img: profileImg,
-      name: "Sunita Singh",
+      img: Profile3,
+      name: "Shruti Singh",
       rating: 4,
       text: "Quick doorstep service. The technician explained everything clearly. Highly recommended!"
     },
     {
-      img: profileImg,
+      img: Profile4,
       name: "Rakesh Gupta",
       rating: 5,
       text: "Affordable and fast service. They repaired my 55-inch Samsung LED flawlessly."
     },
     {
-      img: profileImg,
-      name: "Meena Bhatt",
+      img: Profile5,
+      name: "Avantika Bhatt",
       rating: 5,
       text: "Very polite and skilled team. Highly reliable TV repair service."
     }

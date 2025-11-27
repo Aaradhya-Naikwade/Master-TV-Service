@@ -79,6 +79,7 @@
 
 .hero-btn:hover {
     transform: translateY(-3px);
+    background-color: #16598b;
 }
 
 /* ANIMATION KEYFRAMES */
