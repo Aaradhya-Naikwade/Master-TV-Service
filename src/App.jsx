@@ -1,4 +1,4 @@
-console.log("TEST:", import.meta.env.VITE_TEST_VAR);
+// console.log("TEST:", import.meta.env.VITE_TEST_VAR);
 
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";

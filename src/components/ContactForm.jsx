@@ -1,7 +1,7 @@
-console.log("SERVICE_ID RAW:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
-console.log("TEMPLATE_ID RAW:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-console.log("PUBLIC_KEY RAW:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-console.log("ALL ENV KEYS:", Object.keys(import.meta.env));
+// console.log("SERVICE_ID RAW:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
+// console.log("TEMPLATE_ID RAW:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
+// console.log("PUBLIC_KEY RAW:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+// console.log("ALL ENV KEYS:", Object.keys(import.meta.env));
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
