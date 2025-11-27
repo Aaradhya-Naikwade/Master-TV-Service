@@ -1,0 +1,26 @@
+.call-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0077ff;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.call-button:hover {
+  background: #0057c9;
+  transform: scale(1.08);
+}
+
+.call-icon {
+  font-size: 24px;
+}

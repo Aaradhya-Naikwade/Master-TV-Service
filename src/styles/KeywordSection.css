@@ -37,7 +37,6 @@
     font-size: 2.4rem;
   font-weight: 700;
   color: var(--text-dark);
-
   margin-bottom: 25px;
   text-align: center;     
 }
@@ -49,7 +48,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: center;   /* Center all keywords */
+  justify-content: center;   
 }
 
 /* ==============================

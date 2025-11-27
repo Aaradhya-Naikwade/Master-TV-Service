@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
-import { FaTv, FaBars, FaTimes } from "react-icons/fa";
+import { FaTv, FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Navbar() {
@@ -16,18 +16,14 @@ export default function Navbar() {
 
   const location = useLocation();
 
-  /* ===============================
-     CLOSE MENUS ON PAGE CHANGE
-  =============================== */
+  /* CLOSE MENUS ON PAGE CHANGE */
   useEffect(() => {
     setDropdownOpen(false);
     setMobileMenuOpen(false);
     setMobileServicesOpen(false);
   }, [location.pathname]);
 
-  /* ===============================
-     CLICK OUTSIDE TO CLOSE 
-  =============================== */
+  /* CLICK OUTSIDE TO CLOSE */
   useEffect(() => {
     function handleClickOutside(e) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -42,17 +38,13 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  /* ===============================
-     BODY SCROLL LOCK (MOBILE MENU)
-  =============================== */
+  /* BODY SCROLL LOCK (MOBILE MENU) */
   useEffect(() => {
     if (mobileMenuOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
   }, [mobileMenuOpen]);
 
-  /* ===============================
-     STICKY NAVBAR ON SCROLL
-  =============================== */
+  /* STICKY NAVBAR */
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 10);
@@ -131,6 +123,19 @@ export default function Navbar() {
             Contact Us
           </NavLink>
 
+          {/* WHATSAPP BUTTON (DESKTOP) */}
+          <a
+            href="https://wa.me/918448315376"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whatsapp-circle-btn"
+          >
+            <FaWhatsapp className="whatsapp-circle-icon" />
+            <span>Chat with Us</span>
+          </a>
+
+
+
         </div>
 
         {/* HAMBURGER (MOBILE) */}
@@ -182,7 +187,6 @@ export default function Navbar() {
 
                   <NavLink
                     to="/display-panel-repairing"
-                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Display Panel Repairing
@@ -190,7 +194,6 @@ export default function Navbar() {
 
                   <NavLink
                     to="/panel-bonding-acf-cof-tab"
-                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Panel Bonding (ACF/COF/TAB)
@@ -198,7 +201,6 @@ export default function Navbar() {
 
                   <NavLink
                     to="/motherboard-repairs"
-                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Motherboard Repairs
@@ -206,7 +208,6 @@ export default function Navbar() {
 
                   <NavLink
                     to="/backlight-repair"
-                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     LED / TV Backlight Repair
@@ -222,6 +223,19 @@ export default function Navbar() {
               >
                 Contact Us
               </NavLink>
+
+              {/* WHATSAPP BUTTON (MOBILE) */}
+              <a
+                href="https://wa.me/918448315376"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-whatsapp-circle-btn"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <FaWhatsapp className="mobile-whatsapp-circle-icon" />
+                Chat with Us
+              </a>
+
 
             </div>
 

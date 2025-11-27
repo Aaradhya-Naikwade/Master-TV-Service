@@ -8,10 +8,11 @@ import About from "./pages/AboutUsPage";
 import Service1 from "./pages/Service1Page";
 import Service2 from "./pages/Service2Page";
 import Service3 from "./pages/Service3Page";
-import Service4 from "./pages/Service4Page";  
+import Service4 from "./pages/Service4Page";
 import Contact from "./pages/ContactPage";
-
 import Footer from "./components/Footer";
+import CallButton from "./components/CallButton";
+
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
       </Routes>
 
       <Footer />
+
+      <CallButton />
+
     </>
   );
 }

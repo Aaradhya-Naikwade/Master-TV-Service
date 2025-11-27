@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import HeroSection from "../components/HeroSection";
 import RunningBanner from "../components/RunningBanner";
 import WhyChooseUs from "../components/WhyChooseUs";
@@ -9,10 +11,11 @@ import ContactSection from "../components/ContactSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import CTASection from "../components/CTASection";
 import KeywordSection from "../components/KeywordSection";
+import PopupForm from "../components/PopupForm";
 
 export default function Home() {
   const keywords = [
-    // Location + Service
+
     "TV Repair Gurgaon",
     "TV Repair Near Me",
     "LED TV Repair",
@@ -24,7 +27,6 @@ export default function Home() {
     "TV Installation",
     "TV Wall Mounting",
 
-    // Brand-Based Keywords
     "LG TV Repair",
     "Samsung TV Repair",
     "Sony TV Repair",
@@ -36,7 +38,6 @@ export default function Home() {
     "Croma TV Repair",
     "Onida TV Repair",
 
-    // TV Issue Keywords
     "TV Backlight Repair",
     "LED Backlight Problem",
     "TV Display Issue Repair",
@@ -45,7 +46,6 @@ export default function Home() {
     "No Display Problem",
     "No Sound Problem",
 
-    // Premium Search Keywords
     "Best TV Repair Service",
     "Affordable TV Repair",
     "Professional TV Technician",
@@ -54,6 +54,16 @@ export default function Home() {
     "4K LED TV Repair",
     "LED/LCD TV Expert"
   ];
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -68,8 +78,9 @@ export default function Home() {
       <TestimonialsSection />
       <CTASection />
 
-      {/* Final Optimized Keyword Section */}
       <KeywordSection keywords={keywords} />
+
+      <PopupForm open={showPopup} onClose={() => setShowPopup(false)} />
     </>
   );
 }

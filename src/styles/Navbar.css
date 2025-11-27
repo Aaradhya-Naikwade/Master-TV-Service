@@ -46,11 +46,21 @@
   gap: 26px;
 }
 
-.desktop-nav a {
+/* .desktop-nav a {
   color: var(--text-dark);
   text-decoration: none;
   font-size: 1rem;
   transition: var(--transition);
+} */
+
+.desktop-nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 1rem;
+    transition: var(--transition);
 }
 
 /* ACTIVE LINK */
@@ -164,10 +174,19 @@
   gap: 25px;
 }
 
-.mobile-links a {
+/* .mobile-links a {
   color: var(--text-dark);
   font-size: 1.2rem;
   text-decoration: none;
+} */
+
+.mobile-links a {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
 }
 
 /* MOBILE SERVICES */
@@ -248,3 +267,36 @@
 .sticky-nav .tv-icon {
   font-size: 1.3rem;
 }
+
+
+.desktop-nav .whatsapp-circle-btn .whatsapp-circle-icon {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  padding: 8px !important;
+  font-size: 20px;
+  border-radius: 30%;
+  width: 38px;
+  height: 38px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.desktop-nav .whatsapp-circle-btn span {
+  color: var(--text-dark) !important;
+  font-weight: 400;
+}
+
+
+.mobile-whatsapp-circle-btn .mobile-whatsapp-circle-icon {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  padding: 10px !important;
+  border-radius: 30%;
+  width: 45px;
+  height: 45px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
