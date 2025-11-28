@@ -84,6 +84,7 @@
 
 .about-btn:hover {
   transform: translateY(-3px);
+  background-color: #16598b;
 }
 
 /* Fade animation for children */

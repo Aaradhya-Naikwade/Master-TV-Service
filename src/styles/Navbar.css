@@ -46,21 +46,14 @@
   gap: 26px;
 }
 
-/* .desktop-nav a {
+.desktop-nav a {
   color: var(--text-dark);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
   font-size: 1rem;
   transition: var(--transition);
-} */
-
-.desktop-nav a {
-    color: var(--text-dark);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    font-size: 1rem;
-    transition: var(--transition);
 }
 
 /* ACTIVE LINK */
@@ -68,7 +61,6 @@
   color: var(--primary) !important;
   font-weight: 600;
 }
-
 
 /* DESKTOP DROPDOWN */
 .services-wrapper {
@@ -95,7 +87,7 @@
   padding: 10px 0;
   display: flex;
   flex-direction: column;
-  
+
   border-radius: 6px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 
@@ -122,13 +114,24 @@
 }
 
 /* HAMBURGER */
-.hamburger {
+/* .hamburger {
   background: none;
   border: none;
   font-size: 1.4rem;
   display: none;
   color: var(--text-dark);
+} */
+
+/* HAMBURGER */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  display: none;            
+  color: var(--text-dark);
+  cursor: pointer;
 }
+
 
 /* MOBILE SIDEBAR */
 .mobile-menu {
@@ -144,7 +147,7 @@
 
   z-index: 100;
   padding: 20px;
-  
+
   transform: translateX(100%);
   animation: slideIn 0.3s forwards ease-out;
 }
@@ -174,19 +177,13 @@
   gap: 25px;
 }
 
-/* .mobile-links a {
+.mobile-links a {
   color: var(--text-dark);
   font-size: 1.2rem;
   text-decoration: none;
-} */
-
-.mobile-links a {
-    color: var(--text-dark);
-    font-size: 1.2rem;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 /* MOBILE SERVICES */
@@ -225,7 +222,6 @@
   }
 }
 
-
 .services-btn.rotate svg,
 .mobile-services-btn.rotate svg {
   transform: rotate(180deg);
@@ -237,14 +233,12 @@
   transition: 0.25s;
 }
 
-
 .mobile-menu-backdrop {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
   z-index: 90;
 }
-
 
 /* Sticky Navbar Animation */
 .navbar {
@@ -253,13 +247,13 @@
 
 .sticky-nav {
   background: #ffffff;
-  height: 60px; /* slight shrink */
+  height: 60px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   border-bottom: none;
   transform: translateY(0);
 }
 
-/* Logo size also smoothly shrinks */
+/* Logo shrink */
 .sticky-nav .logo {
   font-size: 1.15rem;
 }
@@ -268,7 +262,7 @@
   font-size: 1.3rem;
 }
 
-
+/* DESKTOP WHATSAPP BUTTON */
 .desktop-nav .whatsapp-circle-btn .whatsapp-circle-icon {
   background: #25d366 !important;
   color: #ffffff !important;
@@ -287,7 +281,7 @@
   font-weight: 400;
 }
 
-
+/* PREVIOUS MOBILE WHATSAPP (OLD) */
 .mobile-whatsapp-circle-btn .mobile-whatsapp-circle-icon {
   background: #25d366 !important;
   color: #ffffff !important;
@@ -300,3 +294,80 @@
   justify-content: center;
 }
 
+/* ⭐ NEW — MOBILE RIGHT ICONS WRAPPER */
+.mobile-right-icons {
+  display: none;
+  align-items: center;
+  gap: 14px;
+}
+/* 
+.mobile-top-whatsapp {
+  display: none;
+}
+
+.mobile-top-whatsapp svg {
+  font-size: 1.55rem;
+  color: #fff;
+  background: #25d366;
+  padding: 4px;
+  border-radius: 30%;
+}
+
+@media (max-width: 900px) {
+  .mobile-right-icons {
+    display: flex;
+  }
+
+  .mobile-top-whatsapp {
+    display: flex;
+  }
+} */
+
+
+/* ⭐ MOBILE RIGHT ICONS WRAPPER (WhatsApp + Hamburger) */
+.mobile-right-icons {
+  display: none;           /* desktop par hidden */
+  align-items: center;
+  gap: 10px;               /* WhatsApp aur hamburger ke beech ka gap */
+}
+
+/* ⭐ MOBILE TOP WHATSAPP BUTTON (same size as hamburger) */
+.mobile-top-whatsapp {
+  display: none;           /* desktop par hidden */
+}
+
+/* RESPONSIVE - MOBILE VIEW */
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-right-icons {
+    display: flex; 
+    gap: 0px;        
+  }
+
+  .mobile-top-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;           
+    height: 40px;         
+    background: #25d366;
+    border-radius: 30%;
+  }
+
+  .mobile-top-whatsapp svg {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .hamburger {
+    display: flex;         
+    align-items: center;
+    justify-content: center;
+    width: 40px;           
+    height: 40px;          
+    font-size: 20px;
+  }
+}

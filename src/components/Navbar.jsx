@@ -123,7 +123,6 @@ export default function Navbar() {
             Contact Us
           </NavLink>
 
-          {/* WHATSAPP BUTTON (DESKTOP) */}
           <a
             href="https://wa.me/918448315376"
             target="_blank"
@@ -134,14 +133,28 @@ export default function Navbar() {
             <span>Chat with Us</span>
           </a>
 
-
-
         </div>
 
-        {/* HAMBURGER (MOBILE) */}
-        <button className="hamburger" onClick={() => setMobileMenuOpen(true)}>
-          <FaBars />
-        </button>
+        {/* ⭐ ADDED WRAPPER → MOBILE ICONS RIGHT SIDE */}
+        <div className="mobile-right-icons">
+
+          {/* MOBILE TOP WHATSAPP ICON */}
+          <a
+            href="https://wa.me/918448315376"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-top-whatsapp"
+          >
+            <FaWhatsapp />
+          </a>
+
+          {/* HAMBURGER (MOBILE) */}
+          <button className="hamburger" onClick={() => setMobileMenuOpen(true)}>
+            <FaBars />
+          </button>
+
+        </div>
+        {/* ⭐ END WRAPPER */}
 
       </div>
 
@@ -223,19 +236,6 @@ export default function Navbar() {
               >
                 Contact Us
               </NavLink>
-
-              {/* WHATSAPP BUTTON (MOBILE) */}
-              <a
-                href="https://wa.me/918448315376"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mobile-whatsapp-circle-btn"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <FaWhatsapp className="mobile-whatsapp-circle-icon" />
-                Chat with Us
-              </a>
-
 
             </div>
 
